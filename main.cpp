@@ -5,17 +5,17 @@ using namespace std;
 vector< pair<int,int> > vec;
 int n,total_count=0,mat[1009][1009]={0};
 
-bool check (int r1,int c1,int r2,int c2){	//checker function for 2 coordinates
+bool check (int r1,int c1,int r2,int c2){	
 	
-	if(r1+c1 == r2+c2 || r1-c1 == r2-c2)	//check for diagonal perfection
+	if(r1+c1 == r2+c2 || r1-c1 == r2-c2)
 		return false;
-	if(r1==r2 || c1==c2)	//check for row column perfection
+	if(r1==r2 || c1==c2)
 		return false;
 		
 	return true;
 }
 
-void printit(){		//function for printing the possible arrangment
+void printit(){
 	cout << endl;
 	memset(mat,0,sizeof(mat));
 	for(int i=0; i<n; i++)
